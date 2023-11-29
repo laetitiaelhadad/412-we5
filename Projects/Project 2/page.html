@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Times New Roman", Times, serif;
+        background-color: rgb(96, 102, 132);
+      }
+
+      .navbar {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: right;
+        padding: 10px 0;
+        background: transparent;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar a {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 14px 16px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+      }
+
+      .navbar a:hover {
+        background-color: rgba(53, 53, 199, 0.313);
+        color: rgb(255, 255, 255);
+      }
+
+      .home {
+        height: 100vh;
+        background-size: cover;
+        text-align: center;
+        background-image: url("Images/./backroundimg.JPG");
+        position: relative;
+      }
+
+      .home img {
+        max-width: 50%;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+      }
+
+      .my-work {
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      .work-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .work-item {
+        width: calc(33.33% - 10px);
+        margin: 0;
+      }
+
+      .work-item img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .contact {
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+        background-color: rgb(96, 102, 132);
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+        height: 20vh;
+      }
+
+      .contact-info {
+        padding: 20px;
+        font-weight: bold;
+      }
+
+      .contact-info a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin: 10px 0;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      .work-title {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 32px;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#my-work">My Work</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+    <div class="home" id="home">
+      <img src="./Images/logo final.png" alt="" />
+    </div>
+
+    <div id="my-work" class="my-work">
+      <h2 class="work-title">My Work</h2>
+      <div class="work-grid">
+        <div class="work-item">
+          <img src="./Images/1.jpeg" alt="Work 1" />
+        </div>
+        <div class="work-item">
+          <img src="./Images/2.jpeg" alt="Work 3" />
+        </div>
+        <div class="work-item">
+          <img src="./Images/3.jpeg" alt="Work 3" />
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="contact">
+      <h2>Interested?</h2>
+      <p>Send me a quick message, would love to hear from you! <br /></p>
+      <div class="contact-info">
+        <a href="mailto:judithzohar@hotmail.com">Email</a>
+        <a href="https://www.instagram.com/zohart.design/">Instagram</a>
+      </div>
+    </div>
+  </body>
+</html>

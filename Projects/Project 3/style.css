@@ -1,0 +1,116 @@
+body,
+    h1,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 2em;
+        background: #fff;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 0 1em;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* Adjusted for closer alignment */
+        padding: 2em;
+        gap: 10px;
+        /* Added gap */
+        flex-wrap: wrap;
+    }
+
+    .hero-content {
+        flex: 1;
+        /* Adjusted flex property */
+        padding: 1em;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    .hero-content p {
+        margin-bottom: 1em;
+    }
+
+    .hero-image img {
+        display: block;
+        max-width: 400px;
+        height: auto;
+        border-radius: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        object-fit: cover;
+        margin: 1em auto 1em 0;
+        /* Adjusted margin */
+    }
+
+    @media (max-width: 450px) {
+        .hero {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-content,
+        .hero-image {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        gap: 1em;
+    }
+
+    .btn {
+        padding: 0.75em 1.5em;
+        border: none;
+        cursor: pointer;
+    }
+        .btn.explore {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: blue;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    .explore {
+        background: #007bff;
+        color: white;
+    }
+
+    .learn-more {
+        background: transparent;
+        color: #007bff;
+        border: 2px solid #007bff;
+    }
