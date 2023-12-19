@@ -3,236 +3,343 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laetitia Elhadad</title>
-    <style>
-      body {
-        font-family: "Times New Roman", Times, serif, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #e3e1e1;
-        position: relative;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-around;
-        padding: 10px;
-        position: relative;
-        z-index: 2;
-      }
-
-      nav a {
-        color: #000000;
-        text-decoration: none;
-        padding: 10px 20px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-
-      nav a:hover {
-        background-color: #a2a4a77b;
-        color: #515151;
-      }
-
-.about-me-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: #000000;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: -100px; 
-}
-
-.about-me-image {
-    border-radius: 50%;
-    width: 500px;
-    height: 500px;
-    overflow: hidden;
-    align-self: flex-start; 
-}
-
-.about-me-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block; 
-    margin: auto; 
-}
-
-.about-me-text {
-    font-size: 24px;
-    line-height: 1.6;
-    font-weight: bold;
-    z-index: 2;
-    position: relative;
-    margin-left: 20px;
-    padding: 20px;
-    align-self: center; 
-}
-
-.about-me-section {
-    background-color: rgb(182, 182, 182);
-    padding: 20px;
-    line-height: 3;
-    margin-top: 100px; 
-}
-
-
-      .my-work-section {
-        background-color: #ffffff;
-        padding: 20px;
-        text-align: left;
-      }
-
-      .work-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-      }
-
-      .work-grid img {
-        width: 100%;
-        height: auto;
-      }
-      #work1 {
-        grid-column: span 2;
-        width: 80%;
-        height: auto;
-      }
-      .my-work-section {
-        background-color: #ffffff;
-        padding: 20px;
-        text-align: left;
-      }
-
-      .work-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-      }
-
-      .work-item {
-        position: relative;
-      }
-      .work-item img {
-        width: 50%;
-        height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .overlay-text {
-        position: absolute;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        opacity: 0;
-        transition: opacity 0.5s;
-        pointer-events: none;
-      }
-
-      .work-item:hover .overlay-text {
-        opacity: 1;
-      }
-      .contact {
-  text-align: center; 
-  padding: 20px;
-  margin-bottom: 50px; 
-}
-
-.contact-info a {
-  display: inline-block; 
-  margin: 10px; 
-  text-decoration: none;
-  color: #000000; 
-  transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-  color: #515151; 
-}
-
-    </style>
+    <title>Portfolio - Laetitia Elhadad</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="navbar">
       <a href="#about-me-section">About me</a>
+      <a href="#about-me-skills">Skills</a>
       <a href="#my-work">My Work</a>
       <a href="#contact">Contact Me</a>
     </nav>
 
-    <div class="about-me-container">
-      <div class="about-me-image">
-        <img src="./img/mefinal.jpeg" alt="Your Profile Picture" />
+    <div class="about-container">
+      <div class="about-me-container">
+        <div class="about-me-image">
+          <img
+            src="./img/mefinal.jpeg"
+            alt="Your Profile Picture"
+            class="about-me-image-profile"
+          />
+        </div>
+        <div class="about-me-text">
+          Hi! My name is <b>Laetitia Elhadad</b>.<br />
+          Scroll down to learn more about me!
+        </div>
       </div>
-      <div class="about-me-text">
-        Hi! My name is Laetitia Elhadad. Scroll down to learn more about me!
+
+      <div class="about-me-section" id="about-me-section">
+        <h1>About me</h1>
+        <p>
+          I'm Laetitia Elhadad, and I'm a student at Vanier College in Montreal,
+          Canada, where I'm pursuing a degree in Micro-media and
+          Hyper-publishing. Apart from my studies, I enjoy helping others. At Go
+          Test Rapide, I assist clients with at-home Antigen tests and maintain
+          client records. I'm passionate about making a positive impact in my
+          community. I've worked with the Israel Cancer Research Fund to
+          organize a dance show fundraiser, and I've choreographed routines for
+          Herzliah High School's variety shows. In my free time, I volunteer at
+          The Family Store and Mada, where I assist with providing support to
+          families in need. I'm also a competitive hip-hop dancer, dedicating
+          time to practices and competing in various dance competitions across
+          Quebec. I'm bilingual in French and English, and I'm proficient in
+          Microsoft and Adobe Suites. My interests include competitive dance,
+          graphic design, social media content creation, and fitness. I'm
+          committed to working hard, giving back to my community, and expressing
+          my creativity in various ways.
+        </p>
       </div>
-    </div>
 
-    <div class="about-me-section" id="about-me-section">
-      <h1>About me</h1>
-      <p>
-        I'm Laetitia Elhadad, and I'm a student at Vanier College in Montreal,
-        Canada, where I'm pursuing a degree in Micro-media and Hyper-publishing.
-        Apart from my studies, I enjoy helping others. At Go Test Rapide, I
-        assist clients with at-home Antigen tests and maintain client records.
-        I'm passionate about making a positive impact in my community. I've
-        worked with the Israel Cancer Research Fund to organize a dance show
-        fundraiser, and I've choreographed routines for Herzliah High School's
-        variety shows. In my free time, I volunteer at The Family Store and
-        Mada, where I assist with providing support to families in need. I'm
-        also a competitive hip-hop dancer, dedicating time to practices and
-        competing in various dance competitions across Quebec. I'm bilingual in
-        French and English, and I'm proficient in Microsoft and Adobe Suites. My
-        interests include competitive dance, graphic design, social media
-        content creation, and fitness. I'm committed to working hard, giving
-        back to my community, and expressing my creativity in various ways.
-      </p>
-    </div>
+      <div class="about-me-skills" id="about-me-skills">
+        <h1>Skills</h1>
+        <div class="about-me-skills-container">
+          <span class="about-me-skills-container-item">
+            <b>Adobe Photoshop</b>
+            <span class="about-me-skills-progress">
+              <span style="width: 60%"></span>
+            </span>
+          </span>
 
-    <div class="my-work-section" id="my-work">
-      <h1>My Work</h1>
-      <div class="work-grid">
-        <div class="work-item">
-          <img src="./img/Alphagettican.png" alt="work 1" />
-          <div class="overlay-text">
-            Recreation of alphagetti package design
+          <span class="about-me-skills-container-item">
+            <b>Adobe Illustrator</b>
+            <span class="about-me-skills-progress">
+              <span style="width: 75%"></span>
+            </span>
+          </span>
+
+          <span class="about-me-skills-container-item">
+            <b>Adobe InDesign</b>
+            <span class="about-me-skills-progress">
+              <span style="width: 50%"></span>
+            </span>
+          </span>
+
+          <span class="about-me-skills-container-item">
+            <b>Microsoft Suits</b>
+            <span class="about-me-skills-progress">
+              <span style="width: 90%"></span>
+            </span>
+          </span>
+
+          <span class="about-me-skills-container-item">
+            <b>HTML & CSS</b>
+            <span class="about-me-skills-progress">
+              <span style="width: 50%"></span>
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="my-work-section" id="my-work">
+        <h1>My Work</h1>
+        <div class="work-grid">
+          <div class="work-item" data-modal-id="modal1">
+            <img src="./img/Alphagettican.png" alt="work 1" />
+            <div class="overlay-text">
+              Packaging Redesign and promotional poster for Alphaghetti
+            </div>
+          </div>
+          <div class="work-item" data-modal-id="modal2">
+            <img src="./img/bgpsafinal.jpg" alt="work 2" />
+            <div class="overlay-text">Public awareness campaign</div>
+          </div>
+
+          <div class="work-item" data-modal-id="modal3">
+            <img src="./img/Banner francophonie final.jpg" alt="work 4" />
+            <div class="overlay-text">Poster design</div>
+          </div>
+          <div class="work-item" data-modal-id="modal4">
+            <img src="./img/monogram.jpeg" alt="work 3" />
+            <div class="overlay-text">Monogram logo</div>
           </div>
         </div>
-        <div class="work-item">
-          <img src="./img/LE agency.jpg" alt="work 2" />
-          <div class="overlay-text">A logo for a marketing agency</div>
-        </div>
-        <div class="work-item">
-          <img src="./img/zoart.jpeg" alt="work 4" />
-          <div class="overlay-text">
-            Website created to showcase an artists work
-          </div>
-        </div>
-        <div class="work-item">
-          <img src="./img/monogram.jpeg" alt="work 3" />
-          <div class="overlay-text">Monogram logo</div>
+      </div>
+      <div id="contact" class="contact">
+        <h2>Interested?</h2>
+        <p>Send me a quick message, would love to talk with you! <br /></p>
+        <div class="contact-info">
+          <a href="mailto:laetitiaelhadad@gmail.com">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 12l11 3.1 7-8.1-8.156 5.672-4.312-1.202 15.362-7.68-3.974 14.57-3.75-3.339-2.17 2.925v-.769l-2-.56v7.383l4.473-6.031 4.527 4.031 6-22z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://linkedin.com/in/laetitia-elhadad-22aa9325b"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/laetitiaelhadad/" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
-        <div id="contact" class="contact">
-      <h2>Interested?</h2>
-      <p>Send me a quick message, would love to talk with you! <br /></p>
-      <div class="contact-info">
-        <a href="mailto:laetitiaelhadad@gmail.com">Email</a>
-        <a href="www.linkedin.com/in/laetitia-elhadad-22aa9325b">Linkedin</a>
-        <a href="https://www.instagram.com/laetitiaelhadad/">Instagram</a>
-      </div>
-    </div>
-  </body>
-</html>
 
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <span class="close-button" id="close-button1">&times;</span>
+        <div class="modal-container">
+          <span class="modal-image">
+            <img src="./img/Alphagettican.png" alt="" />
+          </span>
+          <span class="modal-text">
+            <h1>Alphaghetti Label Redesign</h1>
+            <p>
+              This project involves a creative redesign of the label for the
+              Alphaghetti product, focusing exclusively on typographic elements.
+              The challenge is to revamp the existing label, enhancing its
+              visual appeal while maintaining the essential product information
+              and brand identity. This redesign aims to make Alphaghetti stand
+              out on the shelves, amidst a sea of competitors.
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <span class="close-button" id="close-button1">&times;</span>
+        <div class="modal-container">
+          <span class="modal-image">
+            <img src="./img/PSA.jpg" alt="" />
+          </span>
+          <span class="modal-text">
+            <h1>Public Awareness Campaign Design</h1>
+            <p>
+              This project involves the development of an engaging public
+              awareness campaign focused on the critical issue of animal abuse.
+              The aim is to raise awareness, educate the public, and promote
+              action against animal abuse through a well-researched and
+              creatively designed marketing strategy.
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <span class="close-button" id="close-button1">&times;</span>
+        <div class="modal-container">
+          <span class="modal-image">
+            <img src="./img/Francophonie 1.png" alt="" />
+          </span>
+          <span class="modal-text">
+            <h1>La Semaine de la Francophonie Poster</h1>
+            <p>
+              The goal of this project is to create an eye-catching poster for
+              La Semaine de la Francophonie at Vanier College. The key is to
+              develop a visual metaphor that captures the spirit of
+              Francophonie, combining creativity and understanding of
+              Francophone culture. The design must effectively convey the
+              event's theme and be adaptable for various formats, aiming to
+              resonate with the college community.
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal4">
+      <div class="modal-content">
+        <span class="close-button" id="close-button1">&times;</span>
+        <div class="modal-container">
+          <span class="modal-image">
+            <img src="./img/monogram.jpeg" alt="" />
+          </span>
+          <span class="modal-text">
+            <h1>Personal Monogram Logo Design</h1>
+            <p>
+              This project involves the creation of a unique monogram logo using
+              your initials. The focus is on designing a distinctive and
+              personal emblem that embodies your identity and can be used to
+              brand your work. The challenge lies in intertwining the initials
+              in an artistic and coherent manner, ensuring that the design is
+              not only visually appealing but also represents your personal
+              brand effectively. This monogram will serve as a signature stamp
+              across your various works, providing a recognizable and
+              professional touch to my work.
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.style.display === "block") {
+          navbar.style.display = "none";
+        } else {
+          navbar.style.display = "block";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav a");
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+              smoothScrollTo(targetSection.offsetTop, 1000); // 1000 milliseconds for the scroll
+            }
+          });
+        });
+
+        function smoothScrollTo(target, duration) {
+          var start = window.scrollY,
+            change = target - start,
+            currentTime = 0,
+            increment = 20;
+
+          var animateScroll = function () {
+            currentTime += increment;
+            var val = Math.easeInOutQuad(currentTime, start, change, duration);
+            window.scrollTo(0, val);
+            if (currentTime < duration) {
+              setTimeout(animateScroll, increment);
+            }
+          };
+
+          animateScroll();
+        }
+
+        Math.easeInOutQuad = function (t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return (c / 2) * t * t + b;
+          t--;
+          return (-c / 2) * (t * (t - 2) - 1) + b;
+        };
+
+        const workItems = document.querySelectorAll(".work-item");
+        const modalOverlay = document.getElementById("modal-overlay");
+
+        workItems.forEach((workItem) => {
+          const modalId = workItem.getAttribute("data-modal-id");
+          const modal = document.getElementById(modalId);
+          const closeButton = modal.querySelector(".close-button");
+
+          workItem.addEventListener("click", function () {
+            modal.style.display = "block";
+            modalOverlay.style.display = "block";
+          });
+
+          closeButton.addEventListener("click", function () {
+            modal.style.display = "none";
+            modalOverlay.style.display = "none";
+          });
+        });
+
+        modalOverlay.addEventListener("click", function () {
+          const modals = document.querySelectorAll(".modal");
+          modals.forEach((modal) => {
+            modal.style.display = "none";
+          });
+          modalOverlay.style.display = "none";
+        });
+      });
+    </script>
   </body>
 </html>

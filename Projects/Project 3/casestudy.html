@@ -10,10 +10,20 @@
     <header>
       <nav class="navbar">
         <div class="logo">CASE STUDY</div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#wireframes">Wireframes</a></li>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navbar">
+          <li>
+            <a class="scroll" href="#about">About</a>
+          </li>
+          <li>
+            <a class="scroll" href="#process">Process</a>
+          </li>
+          <li>
+            <a class="scroll" href="#challenges">Challenges</a>
+          </li>
+          <li>
+            <a class="scroll" href="#results">Results</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -21,19 +31,137 @@
       <section class="hero">
         <div class="hero-content">
           <h1>Welcome to my case study, ZoArt</h1>
-          <p>A website for an artsit that wants to showcase her work.</p>
+          <p>A website for an artist that wants to showcase her work.</p>
           <div class="buttons">
-            <a
-              href="https://laetitia93.micromediaweb.com/web5/Projects/Project%202/page.html"
-              class="btn explore"
-              >ZoArt website</a
-            >
+            <a href="https://laetitia93.micromediaweb.com/web5/Projects/Project%202/page.html" class="btn explore">ZoArt website</a>
           </div>
         </div>
         <div class="hero-image">
           <img src="./img/Img1.png" alt="" />
         </div>
       </section>
+      <section id="about" class="about-section">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Behind ZoArt</h2>
+            <p>At the heart of ZoArt is a mom whose life is as colorful and textured as her paintings. With four kids in tow, her world is a whirlwind of activity, yet amidst the chaos, she finds a serene escape in art. It's her solace and her celebration, where the quiet moments between the daily hustle burst into life on canvas. Her art is an eclectic tapestry, weaving together threads of joy, challenges, and dreams, much like her own life. She delights in the alchemy of colors and textures, finding magic in the way they blend and come alive. To her, art is not just an expression, but a conversation with the world, a story she tells with every brushstroke, inviting us all to listen with our eyes. ZoArt is more than a gallery—it's a window into the soul of a woman for whom art is as essential as breathing, a dance of imagination that she joyfully shares with the world.</p>
+          </div>
+          <div class="about-image">
+            <img src="/web5/Projects/Project 3/img/mom.jpg" alt="Artist at work" />
+          </div>
+        </div>
+      </section>
+      <section id="process" class="about-section">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>The Creative Process</h2>
+            <p>Discover the steps and stages that bring ZoArt to life. From the moodboard creation, to the wireframes to the final touches, the process is a tough one but with ideas, it all comes together! </p>
+          </div>
+          <div class="process-gallery">
+            <div class="process-item">
+              <img src="./img/moodboard.png" alt="Moodboard" />
+              <p class="process-caption">Moodboard</p>
+            </div>
+            <div class="process-item">
+              <img src="./img/mockup.png" alt="Mockups" />
+              <p class="process-caption">Mockups</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="challenges" class="about-section">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Overcoming Challenges</h2>
+            <p>The journey of crafting the ZoArt website was marked by its own unique set of challenges. From conceptualizing a design that truly encapsulates the essence of ZoArt's artistry to implementing technical functionalities, each step presented hurdles that demanded creative and technical problem-solving. This section delves into those challenges and the innovative approaches employed to bring the ZoArt digital experience to life, ensuring it resonates with the art it showcases.</p>
+          </div>
+          <div class="challenge-images">
+            <img src="./img/colorpalette.png" alt="Color palette" />
+            <img src="./img/phonemu.jpeg" alt="Phone Mockup" />
+          </div>
+        </div>
+      </section>
+      <section id="results" class="about-section">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>Remarkable Results</h2>
+            <p>Behold the outcomes of dedication and passion. The results section showcases the finished website, telling its own story of conception, creation, and completion, echoing the artist's journey.</p>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./img/1.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="./img/2.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="./img/3.png" style="width:100%"> 
+            </div>
+            <div class="mySlides fade">
+                <img src="./img/4.png" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+</section>
     </main>
+    <script>
+      document.querySelectorAll('.scroll').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.style.display === "block") {
+          navbar.style.display = "none";
+        } else {
+          navbar.style.display = "block";
+        }
+      }
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
   </body>
+</html>
 </html>
